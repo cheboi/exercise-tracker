@@ -1,33 +1,18 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import "../styles/Navbar.css";
 
-export default class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">
-          ExerciseTracker
-        </Link>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav">
-            <li className="navbar-item">
-              <Link to="/" className="nav-link">
-                Exercises
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/create" className="nav-link">
-                Create Exercise
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/user" className="nav-link">
-                Create User
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
-}
+const Navbar = ({ setActivePage }) => {
+  return (
+    <nav className="navbar">
+      <h1>🏋️ Exercise Tracker</h1>
+      <div>
+        <button onClick={() => setActivePage("dashboard")}>Dashboard</button>
+        <button onClick={() => setActivePage("exercises")}>Exercises</button>
+        <button onClick={() => setActivePage("goals")}>Goals</button>
+        <button onClick={() => setActivePage("progress")}>Progress</button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
