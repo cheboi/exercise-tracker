@@ -23,3 +23,13 @@
 .navbar button:hover {
   background: #ddd;
 }
+
+.search-bar {
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 180px;
+  outline: none;
+  transition: width 0.3s ease-in-out;
+}
